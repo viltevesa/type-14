@@ -14,7 +14,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .grid-task--2 {
-  /* Sudarykite tinklelį */
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .grid-task__child-2x {
