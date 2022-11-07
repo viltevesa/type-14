@@ -32,8 +32,9 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-task--3 {}
-
+.grid-task--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .grid-task--4 {}
 
@@ -84,6 +85,6 @@
 }
 
 /* gird areas */
-.grid-area-2-5-2-4 {
-  grid-area: 2 / 5 / 2 / 4;
+.grid-area-1-1-3-3 {
+  grid-area: 1 / 1 / 3 / 3;
 }
