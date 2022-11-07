@@ -1,9 +1,23 @@
+.grid-tasks-img {
+  display: block;
+  height: 800px;
+  margin: 40px auto;
+}
+
+.grid-tasks-grid {
+  display: grid;
+  margin: 40px auto;
+  height: 800px;
+  width: 970px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
 .grid-task {
   display: grid;
   background: #333;
   gap: 5px;
-  height: 300px;
-  width: 300px;
 }
 
 .grid-task>* {
