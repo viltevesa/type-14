@@ -1,0 +1,26 @@
+.grid-task {
+  display: grid;
+  background: #333;
+  gap: 5px;
+  height: 300px;
+  width: 300px;
+}
+
+.grid-task>* {
+  background: linear-gradient(to left bottom, #3d3, #5a5)
+}
+
+.grid-task--1 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-task--2 {
+  /* Sudarykite tinklelį */
+}
+
+.grid-task__child-2x {
+  grid-column: 2 span;
+}
+
+.grid-task__child-2y {
+  grid-row: 2 span;
+}
