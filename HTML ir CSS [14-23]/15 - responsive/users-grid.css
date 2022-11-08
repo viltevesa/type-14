@@ -6,20 +6,17 @@
   padding: 3rem 1.5rem;
   display: grid;
   gap: 1.5rem;
-}
-
-.user-grid>* {
-  justify-self: center;
+  justify-items: center;
 }
 
 .user-card {
   width: 300px;
   box-shadow: 0 4px 6px 2px #0005;
+  background-color: #fff;
 }
 
 .user-card__body {
   text-align: center;
-  background-color: #fff;
   padding: 0.75rem
 }
 
