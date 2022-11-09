@@ -65,6 +65,39 @@ body {
   transition: top 0.4s ease-in-out;
 }
 
+.navbar__nav > ul {
+  margin: 0;
+  padding: 1rem ;
+  list-style-type: none;
+}
+
+.navbar__nav li {
+  overflow: hidden;
+} 
+
+.navbar__nav a {
+  position: relative;
+  left: -20px;
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  padding: 0.5em;
+  transition: left 0.3s ease-in-out;
+}
+
+.navbar__nav a:before {
+  display: inline-block;
+  content: '▶';
+  width: 20px;
+}
+
+.navbar__nav a:hover {
+  color: #fff;
+  left: 0;
+}
+
+
+
 .navbar__nav.show {
   top: 0;
 }
