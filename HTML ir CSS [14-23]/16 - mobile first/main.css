@@ -13,9 +13,8 @@ body {
 }
 
 .navbar {
+  position: relative; /* atspirties taškas išlendančiam meniu */
   height: var(--navbar-height);
-  background-color: #252525;
-  padding: var(--navbar-padding) 0;
 }
 
 /* bendros paskirties */
@@ -23,6 +22,13 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 0 1rem;
+}
+
+.navbar>.container {
+  position: relative;
+  background-color: #252525;
+  padding: var(--navbar-padding) 1rem;
+  z-index: 10;
 }
 
 .navbar__layout {
@@ -45,4 +51,20 @@ body {
   color: #fff;
   width: var(--navbar-content-height);
   border-radius: 4px;
+}
+
+/* Išlendantis meniu */
+.navbar__nav {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  padding-top: var(--navbar-height);
+  background-color: #252525bb;
+  z-index: 5;
+  transition: top 0.4s ease-in-out;
+}
+
+.navbar__nav.show {
+  top: 0;
 }
