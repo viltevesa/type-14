@@ -1,7 +1,12 @@
 :root {
+  /* colors */
+  --color-dark: #3333aa;
+
+  /* navbar */
   --navbar-height: 60px;
   --navbar-padding: 10px;
-  --navbar-content-height: calc(var(--navbar-height) - var(--navbar-padding) * 2); /* 40px */
+  --navbar-content-height: calc(var(--navbar-height) - var(--navbar-padding) * 2);
+  --navbar-mobile-link-animation-offset: 25px;
 }
 
 body {
@@ -25,13 +30,12 @@ body {
 
 .navbar>.container {
   position: relative; /* atspirties taškas išlendančiam meniu */
-  background-color: #252525;
   padding: 0;
 }
 
 .navbar__layout {
   position: relative;
-  background-color: #252525;
+  background-color: var(--color-dark);
   padding: var(--navbar-padding) 1rem;
   display: flex;
   justify-content: space-between;
@@ -80,7 +84,7 @@ body {
 
 .navbar__nav a {
   position: relative;
-  left: -20px;
+  left: calc(var(--navbar-mobile-link-animation-offset) * -1);
   display: block;
   color: #ddd;
   text-decoration: none;
@@ -91,7 +95,7 @@ body {
 .navbar__nav a:before {
   display: inline-block;
   content: '▶';
-  width: 20px;
+  width: var(--navbar-mobile-link-animation-offset);
 }
 
 .navbar__nav a:hover {
@@ -105,7 +109,7 @@ body {
 
 @media screen and (min-width: 700px) {
   .navbar {
-    background-color: #252525;
+    background-color: var(--color-dark);
   }
 
   .bi.bi-list {
@@ -114,30 +118,27 @@ body {
 
   .navbar__layout {
     z-index: 0;
-    background-color: initial;
   }
-
+  
   .navbar__nav {
     top: 0;
     right: 1rem;
+    background-color: initial;
     left: initial;
     width: initial;
-    background-color: initial;
     padding: 0;
-    height: 100%;
   }
 
   .navbar__nav ul {
     display: inline-flex;
     padding: 0;
-    height: 100%;
   }
 
   .navbar__nav a {
     display: inline-grid;
     place-items: center;
     left: 0;
-    height: 100%;
+    height: var(--navbar-height);
     padding: 1rem;
     font-size: 1.1em;
   }
@@ -149,6 +150,4 @@ body {
   .navbar__nav a:before {
     display: none;
   }
-
-
 }
