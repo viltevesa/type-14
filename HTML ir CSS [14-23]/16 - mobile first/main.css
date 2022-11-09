@@ -13,7 +13,6 @@ body {
 }
 
 .navbar {
-  position: relative; /* atspirties taškas išlendančiam meniu */
   height: var(--navbar-height);
 }
 
@@ -25,15 +24,18 @@ body {
 }
 
 .navbar>.container {
-  position: relative;
+  position: relative; /* atspirties taškas išlendančiam meniu */
   background-color: #252525;
-  padding: var(--navbar-padding) 1rem;
-  z-index: 10;
+  padding: 0;
 }
 
 .navbar__layout {
+  position: relative;
+  background-color: #252525;
+  padding: var(--navbar-padding) 1rem;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 
 .logo-container {
@@ -51,6 +53,7 @@ body {
   color: #fff;
   width: var(--navbar-content-height);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Išlendantis meniu */
@@ -96,8 +99,56 @@ body {
   left: 0;
 }
 
-
-
 .navbar__nav.show {
   top: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .navbar {
+    background-color: #252525;
+  }
+
+  .bi.bi-list {
+    display: none;
+  }
+
+  .navbar__layout {
+    z-index: 0;
+    background-color: initial;
+  }
+
+  .navbar__nav {
+    top: 0;
+    right: 1rem;
+    left: initial;
+    width: initial;
+    background-color: initial;
+    padding: 0;
+    height: 100%;
+  }
+
+  .navbar__nav ul {
+    display: inline-flex;
+    padding: 0;
+    height: 100%;
+  }
+
+  .navbar__nav a {
+    display: inline-grid;
+    place-items: center;
+    left: 0;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.1em;
+  }
+
+  .navbar__nav a:hover {
+    background-color: #ffffff22;
+  }
+
+  .navbar__nav a:before {
+    display: none;
+  }
+
+
 }
