@@ -1,0 +1,31 @@
+??? {
+  margin: ???;
+}
+
+* {
+  ???: border-box;
+}
+
+.navbar {
+  ???: 60??;
+  background-color: #fff;
+  padding: ?? ??;
+}
+
+.container {
+  padding: ??;
+}
+
+.navbar__content {
+  display: ???;
+  justify-content: ???;
+}
+
+.logo-container {
+  ???: 100%;
+}
+
+.logo-container > img {
+  height: ???;
+}
+
