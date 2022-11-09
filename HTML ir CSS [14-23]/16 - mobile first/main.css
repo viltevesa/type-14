@@ -1,31 +1,48 @@
-??? {
-  margin: ???;
+:root {
+  --navbar-height: 60px;
+  --navbar-padding: 10px;
+  --navbar-content-height: calc(var(--navbar-height) - var(--navbar-padding) * 2); /* 40px */
+}
+
+body {
+  margin: 0;
 }
 
 * {
-  ???: border-box;
+  box-sizing: border-box;
 }
 
 .navbar {
-  ???: 60??;
-  background-color: #fff;
-  padding: ?? ??;
+  height: var(--navbar-height);
+  background-color: #252525;
+  padding: var(--navbar-padding) 0;
 }
 
+/* bendros paskirties */
 .container {
-  padding: ??;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
-.navbar__content {
-  display: ???;
-  justify-content: ???;
+.navbar__layout {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo-container {
-  ???: 100%;
+  display: inline-flex;
 }
 
 .logo-container > img {
-  height: ???;
+  height: var(--navbar-content-height);
 }
 
+.bi.bi-list {
+  display: inline-grid;
+  place-items: center;
+  font-size: calc(var(--navbar-content-height) - 10px);
+  color: #fff;
+  width: var(--navbar-content-height);
+  border-radius: 4px;
+}
