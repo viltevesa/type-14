@@ -7,17 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>17 - animations and transitions</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="flip-card.css">
 </head>
 
 <body>
 
   <section class="container">
+    <h1>Animation types</h1>
     <div class="square-container">
-      <!-- <div class="square transition-green-scale">With transition, on hover</div> -->
-      <!-- <div class="square green-background-once">once with @keyframes</div> -->
-      <!-- <div class="square green-background-alternate">alternate with @keyframes</div> -->
-      <!-- <div class="square green-background-pulse">pulase with @keyframes</div> -->
-      
+      <div class="square transition-green-scale">With transition, on hover</div>
+      <div class="square green-background-once">once with @keyframes</div>
+      <div class="square green-background-alternate">alternate with @keyframes</div>
+      <div class="square green-background-pulse">pulse with @keyframes</div>
+      <div class="square rotation-x">rotate-x</div>
+      <div class="square rotation-y">rotate-y</div>
+      <div class="square rotation-z">rotate-z</div>
+      <div class="heart pulse"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Card flip</h2>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://unsplash.it/300/300" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1> 
+            <p>Architect & Engineer</p> 
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
