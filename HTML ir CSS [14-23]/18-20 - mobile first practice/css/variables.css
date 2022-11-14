@@ -5,9 +5,9 @@
   --color-black-tranparent: #000000de;
   --color-shadow: #0003;
   --color-black-hover: #222;
-  --color-primary: #009e5a;
-  --color-primary-light: #2bcc86;
-  --color-primary-hover: #018b4f;
+  --color-primary: #645cff;
+  --color-primary-light: #7169fb;
+  --color-primary-hover: #5046ff;
 
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -22,7 +22,6 @@
   --breakpoint-sm: 580px;
   --breakpoint-md: 800px;
   --breakpoint-lg: 1200px;
-  --breakpoint-xl: 1440px;
 
   --border-radius: 4px;
 
