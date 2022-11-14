@@ -1,0 +1,5 @@
+1. Padaryti mobile navbar'ą:
+  * panaudoti google fonts šriftą  - logo
+  * Panaudoti (bootstrap) ikonas
+
+
