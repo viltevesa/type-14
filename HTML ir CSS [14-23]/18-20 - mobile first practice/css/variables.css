@@ -1,13 +1,16 @@
 :root {
   --color-white: #fff;
   --color-white-hover: #ddd;
-  --color-black: #000;
-  --color-black-tranparent: #000000de;
+
+  --color-light-grey: #f8fafc;
+
+  --color-black: #222222;
+  --color-black-hover: #252525;
   --color-shadow: #0003;
-  --color-black-hover: #222;
+
   --color-primary: #645cff;
   --color-primary-light: #7169fb;
-  --color-primary-hover: #5046ff;
+  --color-primary-hover: #5952e6;
 
   --spacing-0: 0;
   --spacing-1: 0.25rem;
