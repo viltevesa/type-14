@@ -2,4 +2,7 @@
   * panaudoti google fonts šriftą  - logo
   * Panaudoti (bootstrap) ikonas
 
+2. Hero sekcija
+  * nuotrauka atsiranda nuo 992px;
+  * naudoti spalvas pagal kintamuosius
 
