@@ -1,6 +1,7 @@
 .navbar {
   position: sticky;
   top: 0;
+  padding: 1rem 0;
 }
 
 .navbar a {
@@ -24,10 +25,6 @@
   font-weight: bold;
 }
 
-.navbar__logo-link:hover {
-  background: var(--color-white-hover);
-}
-
 .navbar__nav--page {
   display: none;
 }
@@ -42,26 +39,27 @@
 }
 
 .navbar__nav--social .navbar__link:hover{
-  color: var(--color-primary-hover);
-  background: var(--color-white-hover);
+  opacity: 0.7;
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 992px) {
   .navbar__nav--page {
     display: block;
   }
 
   .navbar__nav--page > ul {
-    gap: 0.5em;
+    gap: 1em;
     font-weight: 700;
   }
   
   .navbar__nav--page .navbar__link {
     color: var(--color-black);
+    transition: color 0.45s ease-in;
+    letter-spacing: 0.09em;
   }
   
   .navbar__nav--page .navbar__link:hover {
-    box-shadow: 0 2px 0  var(--color-primary);
+    color: var(--color-primary);
   }
 }
