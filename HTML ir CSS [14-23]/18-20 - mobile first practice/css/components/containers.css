@@ -2,4 +2,5 @@
   padding-left: var(--spacing-4);
   padding-right: var(--spacing-4);
   max-width: 1170px;
+  margin: auto;
 }

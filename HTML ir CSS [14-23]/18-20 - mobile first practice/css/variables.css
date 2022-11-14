@@ -5,11 +5,13 @@
   --color-light-grey: #f8fafc;
 
   --color-black: #222;
+  --color-black-trasparent: #000000b3;
   --color-shadow: #0003;
 
   --color-primary: #645cff;
   --color-primary-light: #7169fb;
   --color-primary-hover: #5952e6;
+  --color-primary-trasparent: #4a3fdab3;
 
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -26,7 +28,7 @@
   --border-radius: 4px;
 
   --font-decoration: 'Bitter', serif;
-  --font-ui: 'Red Hat Mono', monospace;
+  --font-ui: Roboto;
   --font-general: Roboto;
 
   --h1: 3rem;

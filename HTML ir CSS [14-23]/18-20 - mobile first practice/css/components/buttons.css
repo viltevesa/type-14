@@ -38,3 +38,14 @@
 .btn.btn--primary:hover {
   background-color: var(--color-primary-hover);
 }
+
+@media (min-width: 992px) {
+  .btn.btn-lg--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  
+  .btn.btn-lg--primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+}
