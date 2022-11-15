@@ -2,6 +2,10 @@
   background-color: var(--color-white);
 }
 
+.bg-white-grey {
+  background-color: var(--color-light-grey);
+}
+
 .bg-black {
   background-color: var(--color-black);
 }

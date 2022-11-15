@@ -21,6 +21,7 @@
 @import './components/buttons.css';
 @import './components/cards.css';
 @import './components/containers.css';
+@import './components/sections.css';
 
 /* Partials */
 @import './partials/navbar.css';
@@ -28,3 +29,4 @@
 /* Sections */
 @import './sections/hero.css';
 @import './sections/about.css';
+@import './sections/services.css';
