@@ -6,12 +6,15 @@
 
   --color-black: #222;
   --color-black-trasparent: #000000b3;
-  --color-shadow: #0003;
+  --color-shadow: #0002;
 
   --color-primary: #645cff;
   --color-primary-light: #7169fb;
   --color-primary-hover: #5952e6;
   --color-primary-trasparent: #4a3fdab3;
+
+  --shadow: 0 1px 1px 1px var(--color-shadow);
+  --shadow-xl: 0 8px 12px 1px var(--color-shadow);
 
   --spacing-0: 0;
   --spacing-1: 0.25rem;
