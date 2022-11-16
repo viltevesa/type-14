@@ -25,6 +25,7 @@
 
 /* Partials */
 @import './partials/navbar.css';
+@import './partials/footer.css';
 
 /* Sections */
 @import './sections/hero.css';
