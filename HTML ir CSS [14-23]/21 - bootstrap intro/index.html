@@ -52,35 +52,70 @@
   </nav>
 
   <div id="main" class="navbar-reference-fix">
-    <main class="py-5">
-      <div class="container">
-        <h1>Bootstrap intro</h1>
-        <p>
-          Bootstrap tai CSS savybių ir JavaScript kodo rinkinys, leidžiantis kurti turinį nerašant
-          savo stiliaus. Visi stiliaus komponentai pasižymi vienoda stilistika:
-          <br>
-          Pagrindiai stiliai aprašomi komponenete, pvz.:<strong>.btn</strong>, o to komponento
-          variacijos įgalinamos papildomomis klasėmis, kurios prasideda taip pat kaip komponentas,
-          pvz: <strong>.btn-primary</strong>.
-          <br><br>
-
-          Taip pat bootstrap turi pagalbinių klasių rinkinius - be variacijų. Šios klasės skirtos
-          išdėstymui, tarpams, spalvoms ir t.t. . pvz.: <strong>text-center</strong>,
-          <strong>bg-secondary</strong>, <strong>d-flex</strong> ir t.t..
-          <br><br>
-
-          Kadangi šiuo metu puslapiai dažniau yra atidaromi su mobiliaisiais irenginiais ne
-          stacionariais kompiuteriai Bootstrap suteikia papildomas variancijas visoms klasės
-          naudojant
-          ekrano dydžius: <strong>sm</strong>, <strong>md</strong>, <strong>lg</strong>,
-          <strong>xl</strong>, <strong>xxl</strong>
-          <br><br>
-
-          Skirtingiems komponentų išdėstymams patogu naudoti specialų <strong>Bootstrap
-            grid</strong>.
-          Kuris yra grįstas <em>display: flex</em> ir <em>flex</em> savybių pagrindu.
-        </p>
+    <main id="carouselMain" class="carousel carousel-dark slide" data-bs-interval="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="3"></button>
       </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" >
+          <img src="img/bootstrap-carousel-2.webp" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-light">Kas yra Bootstrap?</h2>
+            <p class="text-light">Bootstrap tai CSS savybių ir JavaScript kodo rinkinys, leidžiantis
+              kurti turinį
+              nerašant
+              savo stiliaus.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/bootstrap-carousel-3.webp" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="p-3 bg-white bg-opacity-75">
+              <h2>Klasių rašymo struktūra</h2>
+              <p>Pagrindiai stiliai aprašomi komponenete, pvz.:<strong>.btn</strong>, o to
+                komponento
+                variacijos įgalinamos papildomomis klasėmis, kurios prasideda taip pat kaip
+                komponentas,
+                pvz: <strong>.btn-primary</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/bootstrap-carousel-4.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-light">Bootstrap GRID sistema</h2>
+            <p class="text-light">Skirtingiems komponentų išdėstymams patogu naudoti specialų <strong>Bootstrap
+                grid</strong>.
+              Kuris yra grįstas <em>display: flex</em> ir <em>flex</em> savybių pagrindu.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/bootstrap-carousel-1.webp" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Pritaikymas skirtingiems ekranamas</h2>
+            <p>Kadangi šiuo metu puslapiai dažniau yra atidaromi su mobiliaisiais irenginiais ne
+              stacionariais kompiuteriai Bootstrap suteikia papildomas variancijas visoms klasės
+              naudojant
+              ekrano dydžius: <strong>sm</strong>, <strong>md</strong>, <strong>lg</strong>,
+              <strong>xl</strong>, <strong>xxl</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselMain"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      
     </main>
   </div>
 
