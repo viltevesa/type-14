@@ -1,12 +1,23 @@
-# Tekstas300
+# Sass project template
 
-* var1
-* var2
-* var3
+## Required programs
+* Node.js, version 16.* or above
 
-
-```css
-.main{
-  color: red;
-}
+## Dependency installation
+To install libraries needed for project run in terminal:
 ```
+npm install
+```
+
+## Available scripts
+To compile scss file to css, run command in terminal:
+```
+npm run compile
+```
+To watch and compile scss file to css, run command in terminal:
+```
+npm run watch
+```
+
+## Preview
+To view project open __public/index.html__ file in browser.
