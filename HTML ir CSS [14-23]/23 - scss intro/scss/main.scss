@@ -1,0 +1,11 @@
+$primary: #b140b5;
+
+.container {
+  h1 {
+    color: $primary;
+  }
+  
+  :hover {
+    color: darken($primary, 0.5);
+  }
+}
