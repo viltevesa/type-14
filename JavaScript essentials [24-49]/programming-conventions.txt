@@ -1,0 +1,1 @@
+Kuriant kintamuosiu VISADA naudoti const, nebent keičiate kintamojo reikšmė
