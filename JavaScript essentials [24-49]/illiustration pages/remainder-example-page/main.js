@@ -7,7 +7,7 @@ const delayDelta = 300;
 squares.forEach((square, i) => {
   setTimeout(() => {
     square.classList.add('show');
-  }, delay + (i % 3) * delayDelta);
+  }, delay + (i % 2) * delayDelta);
 })
 
 // 0 % 3 = 0

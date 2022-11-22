@@ -15,6 +15,10 @@
  *      ir daug kitų prototipų...
 */
 
+
+
+
+
 console.group('Primityvių kintamųjų kopijavimas');
 {
   const a = 7;
