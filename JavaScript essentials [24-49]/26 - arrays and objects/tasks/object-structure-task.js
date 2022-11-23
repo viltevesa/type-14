@@ -44,6 +44,7 @@ console.group('Lietuva yra šalis kurioje gyvenu.');
 {
   const result = obj.a.p + obj.y + obj.l;
   console.log(result);
+  console.log(obj.f[1].s)
 }
 console.groupEnd();
 
