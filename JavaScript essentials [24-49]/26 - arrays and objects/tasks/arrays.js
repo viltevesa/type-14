@@ -1,5 +1,4 @@
-let numbers = [46, 1, 4, 78, 9, 5, 1, 4, 5, 5];
-// indeksai:    0  1  2   3  4  5  6  7  8  9
+
 let nouns = ['apple', 'sister', 'hammer', 'sun', 'table', 'sky', 'lake'];
 // indeksai:    0       1         2        3       4        5       6    
 let helpers = ['in', 'with', 'on', 'my', 'is', 'a', 'the', ' '];
