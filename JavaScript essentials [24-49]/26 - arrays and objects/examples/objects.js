@@ -14,6 +14,7 @@ console.group('Objekto deklaravimas');
   };
   console.log(automobilis);
 
+
   console.groupCollapsed('Savybių panaudojimas');
   {
     const prop1 = 'marke';
@@ -75,7 +76,7 @@ console.group('Objekto savybių kūrimas trumpuoju būdu');
     weight,
     height,
     width,
-    depth
+    depth,
   };
   console.log(wardrobe);
 
@@ -84,7 +85,7 @@ console.group('Objekto savybių kūrimas trumpuoju būdu');
   // eilutėje yra spausdinama, galima įvilkti norimas savybes į objekto skliaustus,
   // ir tuomet kintamieji bus atspausdinti lyg objekto savybes, kur galėsime matyti
   // jų reikšmes kartu su pavadinimais.
-  
+
   // ... kodo fragmentas
   const a = 7;
   const b = '49687asd';
