@@ -1,15 +1,14 @@
-const numbers = [1, 2, 3, 4, 5, 6];
-//               0  1  2  3  4  5  | numbers.length -> 6
-
-/*
-  pradinis kintamasis
-  // salyga
-  zingsnis
-  // vykdymo blokas
-*/
-
-for (let i = numbers.length - 1; i >= 0; i -= 2) {
-  console.log({ i, el: numbers[i] });
+function atlktiMokejima(piniguSuma, saskaita, gavejoVardas) {
+  console.log('Siunčiama užklausa į banką...');
+  console.table({ piniguSuma, saskaita, gavejoVardas })
 }
 
-console.log('ciklas baigesi')
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');
+atlktiMokejima(50, 'LT354849756558454', 'Jonavis Grūdėla');

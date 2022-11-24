@@ -4,6 +4,13 @@
     * su for ciklu
 */
 
+/*
+  pradinis kintamasis/ iteratorius - kuris deklaruojamas vieną kartą
+  salyga - kurią įtakoja iteratorius
+  žingsnis - kuris keičią iteratorių ir artėti link baigtinės salygos
+  vykdymo blokas - veiksmai atliekami su kiekviena iteracija
+*/
+
 const numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
 
 console.groupCollapsed('WHILE');
@@ -11,6 +18,12 @@ console.groupCollapsed('WHILE');
   console.groupCollapsed('1. Sukurkite ciklą kuris 5 kartus atspausdintų "Sveikas Pasauli"');
   {
 
+    let i = 8;
+
+    while (i < 13) {
+      console.log('Sveikas Pasauli')
+      i++;
+    }
   }
   console.groupEnd();
   console.groupCollapsed('2. Sukurkite ciklą kuris atspausdintų nuo 1 iki 5. Naudojant <');
