@@ -44,7 +44,8 @@ console.group('Lietuva yra šalis kurioje gyvenu.');
 {
   const result = obj.a.p + obj.y + obj.l;
   console.log(result);
-  console.log(obj.f[1].s)
+  console.log(obj.f[1].a.s); // kurioje
+  console.log(obj.c[2].k) // .
 }
 console.groupEnd();
 
@@ -52,6 +53,7 @@ console.group('mano mėgstamiausia spalva yra žalia.');
 {
   const result = '';
   console.log(result);
+  console.log(obj.f[0].a[2]); // mano
 }
 console.groupEnd();
 
