@@ -2,9 +2,9 @@ iki 11-28: +1 balas prie kontrolinio;
   * cycles.js
   * arrays.js
   * functions-tasks-1.js
-  * object-tasks.js
   
 iki 12:05 +1 balas prie kontrolinio;
+  * object-tasks.js
   # ↓↓  Naudojant for, while, if, else ir kitus programavimo konstruktus ↓↓ 
   * functions-tasks-2.js
   * function-tasks-array-iterative-1.js
