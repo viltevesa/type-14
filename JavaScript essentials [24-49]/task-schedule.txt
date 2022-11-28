@@ -4,6 +4,7 @@ iki 11-28: +1 balas prie kontrolinio;
   * functions-tasks-1.js
   
 iki 12:05 +1 balas prie kontrolinio;
+  * function-edabit-tasks.js // 7val darbas individualiai sprendžiant funkcijas
   * object-tasks.js
   # ↓↓  Naudojant for, while, if, else ir kitus programavimo konstruktus ↓↓ 
   * functions-tasks-2.js
