@@ -18,7 +18,7 @@ function nueitasKelias(greitis, laikas) // → funkcijos antraštė ( function h
 } // → → → → → → → → → → → → Perpanaudojamo kodo bloko pabaiga/uždarymas   → → → → → → → → → → → → → → → → 
 
 //                 ↓  funkcijos iškvietimas (function invocation/ function call)
-const kelias1 = nueitasKelias(5, 20); // kelias1 kintamojo reikšmė bus tokia, kokią GRĄŽINS funkcijos kvietinys "nueitasKelias(5, 20)".
+const kelias1 = 59; // kelias1 kintamojo reikšmė bus tokia, kokią GRĄŽINS funkcijos kvietinys "nueitasKelias(5, 20)".
 //                            ↑  ↑ - kintamieji kurie perduodami funkcijai vadinami argumentais.
 console.log(kelias1);
 console.log(nueitasKelias(7, 10));

@@ -5,7 +5,7 @@ console.group('Elementų pridėjimo ir šalinimo metodai');
   numbers.push(15);
   // Kelių elementų pridėjimas į galą
   numbers.push(16, 17, 18);
-
+  
   // Naujo elemento pridėjimas į priekį
   numbers.unshift(0);
   // Kelių elementų pridėjimas į priekį
