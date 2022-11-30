@@ -21,7 +21,7 @@ console.groupCollapsed('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
 }
 console.groupEnd();
 
-console.group('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
+console.groupCollapsed('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
 {
   function addName(obj, name, value) {
     obj[name] = value;
@@ -36,7 +36,7 @@ console.group('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
 }
 console.groupEnd();
 
-console.group('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
+console.groupCollapsed('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
 {
   const generationObject = {
     m: {
@@ -82,7 +82,7 @@ console.group('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
 }
 console.groupEnd();
 
-console.group('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
+console.groupCollapsed('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
 {
   // Jeigu reikia kaupti/formuoti reikšmę su kiekvienu masyvo elementu, naudojama metodologija:
   // 1. padeklaruojamas pradinis elementas
@@ -131,26 +131,95 @@ console.group('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
 }
 console.groupEnd();
 
-console.group('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
+console.groupCollapsed('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
 {
+  function calculateDifference(obj, limit) {
+    const valueArr = Object.values(obj);
+    let sum = 0;
+    for (let i = 0; i < valueArr.length; i += 1) sum += valueArr[i];
 
+    return sum - limit;
+  }
+
+  console.table({
+    'calculateDifference({ "baseball bat": 20 }, 5)': calculateDifference({ "baseball bat": 20 }, 5),
+    'calculateDifference({ skate: 10, painting: 20 }, 19)': calculateDifference({ skate: 10, painting: 20 }, 19),
+    'calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400)': calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400),
+  });
 }
 console.groupEnd();
 
-console.group('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
+console.groupCollapsed('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
 {
+  function toArray(obj) {
+    return Object.entries(obj)
+  }
 
+  console.log({
+    'toArray({ a: 1, b: 2 })': toArray({ a: 1, b: 2 }),
+    'toArray({ shrimp: 15, tots: 12 })': toArray({ shrimp: 15, tots: 12 }),
+    'toArray({})': toArray({})
+  })
 }
 console.groupEnd();
 
-console.group('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
+console.groupCollapsed('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
 {
+  // Jeigu reikia kaupti/formuoti reikšmę su kiekvienu masyvo elementu, naudojama metodologija:
+  //   1. padeklaruojamas pradinis elementas
+  //   2. Pradedamas ciklas
+  //    2.1 Kiekviena iteracija papildo/keičia padeklaruotą kintamajį [1.]
+  //   3. atliekamas galutinis formavimas (nebūtinas)
+  //   4. grąžinama/spausdinama reikšmė 
+
+
+  function inkLevels(inks) {
+    const valueArr = Object.values(inks);
+    let min = valueArr[0];
+
+    for (let i = 1; i < valueArr.length; i++) {
+      if (valueArr[i] < min) {
+        min = valueArr[i];
+      }
+    }
+
+    return min;
+  }
+
+  // const inkLevels = inks => Math.min(...Object.values(inks));
+
+  console.table({
+    'inkLevels({"cyan": 23,"magenta": 12,"yellow": 10})': inkLevels({ "cyan": 23, "magenta": 12, "yellow": 10, 'asdasdsa': 2 }),
+    'inkLevels({"cyan1": 432,"magenta1": 543,"yellow1": 777})': inkLevels({ "cyan1": 432, "magenta1": 543, "yellow1": 777 }),
+    'inkLevels({"cyan": 700,"magenta": 700,"yellow": 0})': inkLevels({ "cyan": 700, "magenta": 700, "yellow": 0 }),
+  })
+
 
 }
 console.groupEnd();
 
 console.group('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
 {
+  // Jeigu reikia kaupti/formuoti reikšmę su kiekvienu masyvo elementu, naudojama metodologija:
+  // 1. padeklaruojamas pradinis elementas
+  // 2. Pradedamas ciklas
+  //  2.1 Kiekviena iteracija papildo/keičia padeklaruotą kintamajį [1.]
+  // 3. atliekamas galutinis formavimas (nebūtinas)
+  // 4. grąžinama/spausdinama reikšmė 
+  function calculateLosses(obj) {
+    let sum = 0;
+    for (const key in obj) {
+      sum += obj[key];
+    }
 
+    if (sum > 0) return sum;
+    return 'Lucky you!'
+  }
+
+  console.table({
+    'calculateLosses({tv: 30,skate: 20, stereo: 50})': calculateLosses({ tv: 30, skate: 20, stereo: 50 }),
+    'calculateLosses({painting: 20000})': calculateLosses({ painting: 20000 }),
+    'calculateLosses({})': calculateLosses({}),
+  })
 }
 console.groupEnd();
