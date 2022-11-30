@@ -1,46 +1,63 @@
-console.groupCollapsed('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
+console.group('1 - https://edabit.com/challenge/nuXdWHAoHv9y38sn7');
+{
+  function byPrice(drink, drinkOther) {
+    return drink.price - drinkOther.price;
+  }
+
+  function sortDrinkByPrice(drinks) {
+    return drinks.sort(byPrice);
+  }
+
+  const drinks = [
+    { name: "lemonade", price: 50 },
+    { name: "lime", price: 5 },
+    { name: "fanta", price: 40 },
+    { name: "cola", price: 20 },
+    { name: "pepsi", price: 30 },
+  ];
+
+  const sortedDrinks = sortDrinkByPrice(drinks);
+  console.table(sortedDrinks)
+}
+console.groupEnd();
+
+console.group('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
 {
 
 }
 console.groupEnd();
 
-console.groupCollapsed('2 - https://edabit.com/challenge/9KEKJG5PZTFmG3Zau');
+console.group('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
 {
 
 }
 console.groupEnd();
 
-console.groupCollapsed('3 - https://edabit.com/challenge/48EJWLhF224na8po3');
+console.group('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
 {
 
 }
 console.groupEnd();
 
-console.groupCollapsed('4 - https://edabit.com/challenge/i6YqzHcSiPiEQKjeX');
+console.group('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
 {
 
 }
 console.groupEnd();
 
-console.groupCollapsed('5 - https://edabit.com/challenge/8s2jy9hR2TAeQinKD');
+console.group('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
 {
 
 }
 console.groupEnd();
 
-console.groupCollapsed('6 - https://edabit.com/challenge/pPNAs5PvB3WvnDwDM');
+console.group('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
 {
 
 }
 console.groupEnd();
 
-console.groupCollapsed('7 - https://edabit.com/challenge/QXWM2oo7rQNiyDsip');
-{
-
-}
-console.groupEnd();
-
-console.groupCollapsed('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
+console.group('8 - https://edabit.com/challenge/pLNavsePxJ87t9Nak');
 {
 
 }
