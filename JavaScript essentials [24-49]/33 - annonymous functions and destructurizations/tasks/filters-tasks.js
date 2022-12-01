@@ -56,7 +56,6 @@ const people = [
 ];
 const numbers = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
 
-// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.filter
 console.group('1. Atrinkti neigiamus skaičius');
 {
 }

@@ -56,7 +56,7 @@ const people = [
 ];
 
 const numbers = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
-
+// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.map
 console.group('1. Sukurkite funkciją kuri performuotų asmens objektą į vardo ir pavardės string`ą. Panaudokite Array.prototype.map, kad sukurti naują masyvą panaudojant šią funkciją.');
 {
 

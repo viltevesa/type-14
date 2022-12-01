@@ -37,7 +37,6 @@ const flats = [
 ];
 
 // Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.forEach
-
 console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
 // <address>, <city>.
 {

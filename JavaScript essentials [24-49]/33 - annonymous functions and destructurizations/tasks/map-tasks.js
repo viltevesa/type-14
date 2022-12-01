@@ -54,25 +54,23 @@ const people = [
     hasCar: false
   }
 ];
+
 const numbers = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
 
-// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.filter
-console.group('1. Atrinkti neigiamus skaičius');
+console.group('1. Sukurkite funkciją kuri performuotų asmens objektą į vardo ir pavardės string`ą. Panaudokite Array.prototype.map, kad sukurti naują masyvą panaudojant šią funkciją.');
 {
+
 }
 console.groupEnd();
 
-console.group('2. Atrinkti nelyginius skaičius');
+console.group('2. Sukurkite funkciją kuri performuotų asmens objektą į amžių. Panaudokite Array.prototype.map, kad sukurti naują masyvą panaudojant šią funkciją.');
 {
+
 }
 console.groupEnd();
 
-console.group('3. Atrinkti žmones kurių vardas ilgesnis nei 6 raidės');
+console.group('3. Sukurkite funkciją kuri padalintų skaičių iš 4. Panaudokite Array.prototype.map, kad sukurti naują masyvą panaudojant šią funkciją.');
 {
-}
-console.groupEnd();
 
-console.group('4. Atrinkti žmones kurie turi mašiną');
-{
 }
 console.groupEnd();

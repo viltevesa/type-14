@@ -36,41 +36,23 @@ const flats = [
   },
 ];
 
-const numbers = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
+// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.forEach
 
-
-// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.reduce
-console.group('1. Sudėkite visus skaičius naudojant Array.prototype.reduce');
+console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
+// <address>, <city>.
 {
 
 }
 console.groupEnd();
 
-console.group('2. Sudėkite visus teigiamus skaičius naudojant Array.prototype.reduce');
+console.group('2. Atspausdinkite kiekvieno buto kambarių skaičių');
 {
 
 }
 console.groupEnd();
 
-console.group('3. Sudėkite visus neigiamus skaičius naudojant Array.prototype.reduce');
-{
-
-}
-console.groupEnd();
-
-console.group('4. Suskaičiuokite visų butų kainų sumą');
-{
-
-}
-console.groupEnd();
-
-console.group('5. Suskaičiuokite vieno buto plotą');
-{
-
-}
-console.groupEnd();
-
-console.group('6. Suskaičiuokite visų butų bendrą plotą');
+console.group('3. Atspausdinkite kiekvieno buto bendrą plotą');
+// Reikės susumuoti naudojant kaupimo algoritmą
 {
 
 }
