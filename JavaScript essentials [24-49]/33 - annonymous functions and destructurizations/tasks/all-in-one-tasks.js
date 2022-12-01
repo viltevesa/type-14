@@ -58,7 +58,6 @@ const flats = [{
   price: 80000
 }];
 
-// ------------------------------ Be anoniminių funkcijų ---------------------
 console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
 // '<address>, <city>'
 {
@@ -76,7 +75,6 @@ console.group('3. Suformuokite butų plotų masyvą');
 }
 console.groupEnd();
 
-// ------------------------------ Su anoniminėmis funkcijomis ---------------------
 console.group('4. Atrinkite 4 kambarių ir dedesnius butus');
 // [{...}, {...}]
 {
