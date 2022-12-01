@@ -42,8 +42,7 @@ const fakeArray = {
   // 1. padeklaruojamas pradinis elementas
   // 2. Pradedamas ciklas
   //  2.1 Kiekviena iteracija papildo/keičia padeklaruotą kintamajį [1.]
-  // 3. atliekamas galutinis formavimas
-  // 4. grąžinama/spausdinama reikšmė 
+  // 3. grąžinama/spausdinama reikšmė 
 
   // 1.
   reduce(reducer, initialValue) {
@@ -54,7 +53,7 @@ const fakeArray = {
       accumulator = reducer(accumulator, this[i], i, this);
     }
 
-    // 4.
+    // 3.
     return accumulator;
   }
 }
@@ -99,8 +98,3 @@ console.group('Array.prototype.reduce implementation example');
   console.log(sum);
 }
 console.groupEnd();
-
-
-
-
-
