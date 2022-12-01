@@ -29,6 +29,7 @@ const fakeArray = {
   filter(filterCallback) {
     const newArr = [];
     for (let i = 0; i < this.length; i++) {
+      //                                     1.     2.  3.
       const returnedValue = filterCallback(this[i], i, this);
       if (returnedValue) {
         newArr.push(this[i]);
