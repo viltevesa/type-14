@@ -59,20 +59,44 @@ const numbers = [1, 15, 9, -9, -8, -7, 2, 8, 51, 6, 5];
 // Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.filter
 console.group('1. Atrinkti neigiamus skaičius');
 {
+  function isNegative(x) {
+    return x < 0;
+  }
+
+  const negativeNumbers = numbers.filter(isNegative);
+  console.table(negativeNumbers);
 }
 console.groupEnd();
 
 console.group('2. Atrinkti nelyginius skaičius');
 {
+  function isOdd(x) {
+    return x % 2 === 1;
+  }
+
+  const oddNumbers = numbers.filter(isOdd);
+  console.table(oddNumbers);
 }
 console.groupEnd();
 
 console.group('3. Atrinkti žmones kurių vardas ilgesnis nei 6 raidės');
 {
+  function hasLongName(person) {
+    return person.name.length > 6;
+  }
+
+  const longNamedPeople = people.filter(hasLongName);
+  console.table(longNamedPeople);
 }
 console.groupEnd();
 
 console.group('4. Atrinkti žmones kurie turi mašiną');
 {
+  function hasCar(person) {
+    return person.hasCar;
+  }
+
+  const potentialDrivers = people.filter(hasCar);
+  console.table(potentialDrivers);
 }
 console.groupEnd();
