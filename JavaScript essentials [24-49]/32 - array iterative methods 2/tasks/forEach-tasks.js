@@ -40,19 +40,35 @@ const flats = [
 console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
 // <address>, <city>.
 {
+  function printFullAddress(flat) {
+    console.log(`${flat.address}, ${flat.city}.`)
+  }
 
+  flats.forEach(printFullAddress)
 }
 console.groupEnd();
 
 console.group('2. Atspausdinkite kiekvieno buto kambarių skaičių');
 {
+  function printRoomsCount(flat) {
+    console.log(flat.rooms.length)
+  }
 
+  flats.forEach(printRoomsCount)
 }
 console.groupEnd();
 
 console.group('3. Atspausdinkite kiekvieno buto bendrą plotą');
 // Reikės susumuoti naudojant kaupimo algoritmą
 {
+  function printFlatArea(flat) {
+    let totalArea = 0;
+    for (let i = 0; i < flat.rooms.length; i++) {
+      totalArea += flat.rooms[i].area;
+    }
+    console.log(totalArea);
+  }
 
+  flats.forEach(printFlatArea)
 }
 console.groupEnd();
