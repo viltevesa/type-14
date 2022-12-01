@@ -69,6 +69,6 @@ console.group('3. Atspausdinkite kiekvieno buto bendrą plotą');
     console.log(totalArea);
   }
 
-  flats.forEach(printFlatArea)
+  flats.forEach(printFlatArea);
 }
 console.groupEnd();
