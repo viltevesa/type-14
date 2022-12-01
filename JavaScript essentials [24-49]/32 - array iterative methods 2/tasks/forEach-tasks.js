@@ -36,16 +36,10 @@ const flats = [
   },
 ];
 
-// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviestami metodą Array.prototype.forEach
-
-// Jeigu reikia kaupti/formuoti reikšmę su kiekvienu masyvo elementu, naudojama metodologija:
-// 1. padeklaruojamas pradinis elementas
-// 2. Pradedamas ciklas
-//  2.1 Kiekviena iteracija papildo/keičia padeklaruotą kintamajį [1.]
-// 3. atliekamas galutinis formavimas
-// 4. grąžinama/spausdinama reikšmė 
+// Kiekvienai užduočiai padeklaruokite funkciją, kurią panaudosite kviesdami metodą Array.prototype.forEach
 
 console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
+// <address>, <city>.
 {
 
 }
@@ -58,6 +52,7 @@ console.group('2. Atspausdinkite kiekvieno buto kambarių skaičių');
 console.groupEnd();
 
 console.group('3. Atspausdinkite kiekvieno buto bendrą plotą');
+// Reikės susumuoti naudojant kaupimo algoritmą
 {
 
 }
