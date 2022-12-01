@@ -54,11 +54,11 @@ console.groupEnd();
 console.group('2. Sudėkite visus teigiamus skaičius naudojant Array.prototype.reduce');
 {
   function sumPositiveReducer(prevSum, el) {
-    if (el > 0) prevSum + el
+    if (el > 0) return prevSum + el
     return prevSum;
   }
 
-  const sumPositives = numbers.reduce(sumPositiveReducer);
+  const sumPositives = numbers.reduce(sumPositiveReducer, 0);
   console.log(sumPositives);
 }
 console.groupEnd();
@@ -66,11 +66,11 @@ console.groupEnd();
 console.group('3. Sudėkite visus neigiamus skaičius naudojant Array.prototype.reduce');
 {
   function sumNegativeReducer(prevSum, el) {
-    if (el < 0) prevSum + el
+    if (el < 0) return prevSum + el
     return prevSum;
   }
 
-  const sumNegatives = numbers.reduce(sumNegativeReducer);
+  const sumNegatives = numbers.reduce(sumNegativeReducer, 0);
   console.log(sumNegatives);
 }
 console.groupEnd();
