@@ -109,12 +109,12 @@ console.group('7. Perforkuokite butus formatu pateiktu komentaruose');
 }
 console.groupEnd();
 
-// Papildomai
+// ---------------------------------------- Manijakams --------------------------------------------
 console.group('8. Atrinkite butus, kurie turi nors vieną kambarį, didesnį nei 19 kvadratų');
 
 console.groupEnd();
 
-console.group('9. Apskaičiuokite visų būtų kainos vidurkį,');
+console.group('9. Apskaičiuokite visų būtų kainos vidurkį');
 
 console.groupEnd();
 
@@ -127,5 +127,3 @@ console.group('10. Apskaičiuokite visų būtų kainą už kvadratą');
 //  1000                    2000                      -> 1500 // butų kvadartų kainų vidurkis
 
 console.groupEnd();
-
-
