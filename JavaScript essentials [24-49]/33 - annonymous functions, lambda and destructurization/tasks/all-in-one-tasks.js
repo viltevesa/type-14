@@ -58,6 +58,10 @@ const flats = [{
   price: 80000
 }];
 
+const roomsAreaSumReducer = function (prevRoomsAreaSum, room) {
+  return prevRoomsAreaSum + room.area;
+}
+
 console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
 // '<address>, <city>'
 {
@@ -80,9 +84,7 @@ console.groupEnd();
 console.group('3. Suformuokite butų plotų masyvą');
 {
   const flatsAreas = flats.map(function (flat) {
-    const flatArea = flat.rooms.reduce(function (prevSum, room) {
-      return prevSum + room.area;
-    }, 0)
+    const flatArea = flat.rooms.reduce(roomsAreaSumReducer, 0)
     return flatArea;
   });
 
@@ -103,9 +105,7 @@ console.groupEnd();
 console.group('5. Apskaičiuokite visų butų bendrą plotą');
 {
   const flatsAreas = flats.reduce(function (prevTotal, flat) {
-    const flatArea = flat.rooms.reduce(function (prevSum, room) {
-      return prevSum + room.area;
-    }, 0);
+    const flatArea = flat.rooms.reduce(roomsAreaSumReducer, 0);
     return prevTotal + flatArea;
   }, 0);
 
@@ -136,9 +136,7 @@ console.group('7. Perforkuokite butus formatu pateiktu komentaruose');
 */
 {
   const refactoredFlats = flats.map(function (flat) {
-    const squares = flat.rooms.reduce(function (prevSum, room) {
-      return prevSum + room.area;
-    }, 0);
+    const squares = flat.rooms.reduce(roomsAreaSumReducer, 0);
     const newPrice = flat.price * 1.1;
 
     return {
