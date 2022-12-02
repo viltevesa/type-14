@@ -61,34 +61,64 @@ const flats = [{
 console.group('1. Atspausdinkite kiekvieno buto adresą su miestu');
 // '<address>, <city>'
 {
+  flats.forEach(function (flat) {
+    console.log(`${flat.address}, ${flat.city}.`);
+  })
 }
 console.groupEnd();
 
-console.group('2. Sukurkite masyvą iš butų kamarių skaičiaus');
+console.group('2. Sukurkite masyvą iš butų kambarių skaičiaus');
 // [4, 5, 3, 3, 3, 3]
 {
+  const flatsRoomCounts = flats.map(function (flat) {
+    return flat.rooms.length;
+  });
+  console.log(flatsRoomCounts);
 }
 console.groupEnd();
 
 console.group('3. Suformuokite butų plotų masyvą');
 {
+  const flatsAreas = flats.map(function (flat) {
+    const flatArea = flat.rooms.reduce(function (prevSum, room) {
+      return prevSum + room.area;
+    }, 0)
+    return flatArea;
+  });
+
+  console.log(flatsAreas);
 }
 console.groupEnd();
 
 console.group('4. Atrinkite 4 kambarių ir dedesnius butus');
 // [{...}, {...}]
 {
+  const bigFlats = flats.filter(function (flat) {
+    return flat.rooms.length >= 4;
+  });
+  console.table(bigFlats);
 }
 console.groupEnd();
 
 console.group('5. Apskaičiuokite visų butų bendrą plotą');
 {
+  const flatsAreas = flats.reduce(function (prevTotal, flat) {
+    const flatArea = flat.rooms.reduce(function (prevSum, room) {
+      return prevSum + room.area;
+    }, 0);
+    return prevTotal + flatArea;
+  }, 0);
+
+  console.log(flatsAreas);
 }
 console.groupEnd();
 
 console.group('6. Atrinkite 3 kambarių butus iš Kauno, kurių kaina mažesnė nei 100 000');
 {
-
+  const notExpensive3RoomFlatsFromKaunas = flats.filter(function (flat) {
+    return flat.rooms.length === 3 && flat.city === 'Kaunas' && flat.price < 100000;
+  });
+  console.table(notExpensive3RoomFlatsFromKaunas);
 }
 console.groupEnd();
 
@@ -105,7 +135,22 @@ console.group('7. Perforkuokite butus formatu pateiktu komentaruose');
   }
 */
 {
+  const refactoredFlats = flats.map(function (flat) {
+    const squares = flat.rooms.reduce(function (prevSum, room) {
+      return prevSum + room.area;
+    }, 0);
+    const newPrice = flat.price * 1.1;
 
+    return {
+      address: `${flat.address}, ${flat.city}.`,
+      city: flat.city,
+      price: newPrice,
+      roomCount: flat.rooms.length,
+      squares,
+      squarePrice: newPrice / squares,
+    }
+  });
+  console.table(refactoredFlats);
 }
 console.groupEnd();
 
