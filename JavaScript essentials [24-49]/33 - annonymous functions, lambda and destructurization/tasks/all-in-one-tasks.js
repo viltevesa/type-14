@@ -84,7 +84,7 @@ console.groupEnd();
 console.group('3. Suformuokite butų plotų masyvą');
 {
   const flatsAreas = flats.map(function (flat) {
-    const flatArea = flat.rooms.reduce(roomsAreaSumReducer, 0)
+    const flatArea = flat.rooms.reduce(roomsAreaSumReducer, 0);
     return flatArea;
   });
 
@@ -105,7 +105,12 @@ console.groupEnd();
 console.group('5. Apskaičiuokite visų butų bendrą plotą');
 {
   const flatsAreas = flats.reduce(function (prevTotal, flat) {
-    const flatArea = flat.rooms.reduce(roomsAreaSumReducer, 0);
+    const flatArea = flat.rooms.reduce(
+      function (prevRoomsAreaSum, room) {
+        return prevRoomsAreaSum + room.area;
+      },
+      0
+    );
     return prevTotal + flatArea;
   }, 0);
 
