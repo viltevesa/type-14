@@ -1,0 +1,3 @@
+array - masyvas -  rinkinys reikšmkškių, kurios numeruojamos indeksais, pradedant 0 -  []
+object - objektas - rakto ir reikšmės porų rinkinys - {}
+
