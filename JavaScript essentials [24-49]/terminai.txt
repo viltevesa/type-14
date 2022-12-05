@@ -1,3 +1,24 @@
-array - masyvas -  rinkinys reikšmkškių, kurios numeruojamos indeksais, pradedant 0 -  []
+                                      Essentials - Pagrindai
+value - reikšmė - programos vykdymo atmintyje išsaugoti duomenys
+identifier/variable - įvardinimas/kintamasis - programuotojo sukurtas simbolių darinys, kuriuo pasiekiama reikšmė
+array - masyvas -  rinkinys reikšmių, kurios numeruojamos indeksais, pradedant 0 -  []
 object - objektas - rakto ir reikšmės porų rinkinys - {}
+ternary operator(inline-if) - trumpasis If salyginis sakinys - salyga ? (vykdoma jei salyga->true): (vykdoma jei salyga->false)
+operator - operatorius - programavimo kalboje užrezervuotas simbolis skirtas atlikti operaciją - veiksmus
+scope - aplinka/terpė - programavimo terpė, kuri turi savo atskirą atmintį saugoti kintamuosius {}
 
+                                        Cycles - ciklai                                        
+iteration - iteracija - konkretus ciklo vykdomojo bloko veikimas
+iterate - iteruoti/cikluoti - pakartotinai vykdyti ciklo vykdomajį bloką
+iterator - iteratorius - kintamuoju pasiekiama reikšmė, kuri naudojama apspręsti ciklo baigtį ir žingsnį.
+
+                                      Functions - funkcijos
+function - funkcija - deklaruojama perpanaudojamas kodo blokas, kuri gali būti iškvietas daug kartų
+invocation/call - iškvietimas - funkcijos vykdymas
+parameters - parametrai - funkcijos iškvietimo metu sukuriami kintamieji, kurių reikšmės bus priskirtos pagal argumentus.
+arguments - argumentai - funkcijos iškvietimo metu perduodamos reikšmės, kurios bus įrašytos į parametrus.
+annonymous function - anoniminė funkcija - funkcijos reikšmė, kuri nepasiekiama kintamuoju.
+
+                                      Algorythms - algoritmai 
+algorythm - algoritmas - užduoties sprendimo principas aprašant veiksmų seką/kartojimus
+sorting - rikiavimas - reikšmių išdėstymas paeiliui, pagal kriterijų
