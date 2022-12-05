@@ -166,3 +166,116 @@ console.groupCollapsed('Objekto destrūkturizavimas kuriant kintamuosius');
   console.groupEnd();
 }
 console.groupEnd();
+
+
+console.group('Masyvo destrūkturizavimas kuriant kintamuosius');
+{
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  const people = [
+    {
+      name: 'Jonas',
+      surname: 'Jonaitis',
+      sex: 'male',
+      age: 26,
+      income: 1200,
+      married: false,
+      hasCar: false
+    },
+    {
+      name: 'Severija',
+      surname: 'Piktutytė',
+      sex: 'female',
+      age: 26,
+      income: 1300,
+      married: false,
+      hasCar: true
+    },
+    {
+      name: 'Valdas',
+      surname: 'Vilktorinas',
+      sex: 'male',
+      age: 16,
+      income: 0,
+      married: false,
+      hasCar: false
+    },
+    {
+      name: 'Virginijus',
+      surname: 'Uostauskas',
+      sex: 'male',
+      age: 32,
+      income: 2400,
+      married: true,
+      hasCar: true
+    },
+    {
+      name: 'Samanta',
+      surname: 'Uostauskienė',
+      sex: 'female',
+      age: 28,
+      income: 1200,
+      married: true,
+      hasCar: true
+    },
+    {
+      name: 'Janina',
+      surname: 'Stalautinskienė',
+      sex: 'female',
+      age: 72,
+      income: 364,
+      married: false,
+      hasCar: false
+    }
+  ];
+
+  console.group('Įprastinis');
+  {
+    // const first = numbers[0];
+    // const second = numbers[1];
+
+    const [largest, secondLargest] = numbers.sort((a, b) => b - a);
+    console.log({ largest, secondLargest });
+  }
+  console.groupEnd();
+
+
+  console.group('Su papildomu gyliu');
+  {
+    const [{ name, surname }] = people.sort((a, b) => b.age - a.age)
+    console.log(name, surname);
+  }
+  console.groupEnd();
+
+  console.group('naudojant funkciją');
+  {
+    const items = {
+      bat: 15,
+      cap: 25,
+      frisbee: 58,
+      blanket: 22,
+    }
+
+    let totalPrice = 0;
+    let check = '';
+
+    Object.entries(items).forEach(([name, price]) => {
+      totalPrice += price;
+      check += `${name}\t\t${price}\n`;
+    });
+
+    console.log(check);
+    console.log('totalPrice:', totalPrice);
+
+
+    const addAllNumbers = (...nums) => nums.reduce((sum, num) => sum + num);
+
+    console.table({
+      'addAllNumbers(2, 3)': addAllNumbers(2, 3),
+      'addAllNumbers(2, 3, 4)': addAllNumbers(2, 3, 4),
+      'addAllNumbers(2, 3, 4, 5)': addAllNumbers(2, 3, 4, 5),
+      'addAllNumbers(2, 3, 4, 5, 19)': addAllNumbers(2, 3, 4, 5, 19),
+    });
+  }
+  console.groupEnd();
+}
+console.groupEnd();
