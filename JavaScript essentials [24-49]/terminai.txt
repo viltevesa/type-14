@@ -1,4 +1,5 @@
                                       Essentials - Pagrindai
+                                      
 value - reikšmė - programos vykdymo atmintyje išsaugoti duomenys
 identifier/variable - įvardinimas/kintamasis - programuotojo sukurtas simbolių darinys, kuriuo pasiekiama reikšmė
 array - masyvas -  rinkinys reikšmių, kurios numeruojamos indeksais, pradedant 0 -  []
