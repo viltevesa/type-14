@@ -7,6 +7,48 @@ const numberArrayDemo = {
   5: 10,
   length: 6,
 };
+/*
+  Array.prototype.map iteracinis metodas yra skirtas kurti naują masyvą, iš iteruojamo masyvo elementų.
+  Iteruodamas per kiekvieną masyvo elementą, jis kviečia argumentu perduotą funkciją su 3 argumentais:
+    1. einamasis elementas
+    2. einamojo elemento indeksas
+    3. iteruojamas masyvas
+  Tos funkcijos grąžintas rezultatas dedamas į naują masyvą. Praiteravus per visus iteruojamo masyvo 
+  elementus, suformuotas masyvas grąžinamas į iškvietimo vietą.
+*/
+numberArrayDemo.__proto__.map = function ( callback ) {
+  const newArray = [];
+  for (let i = 0; i < this .length; i++) {
+
+    const callbackResult = callback( this[i],  i,  this );
+    newArray .push( callbackResult );
+  }
+
+  return newArray;
+}
+
+const doubledArray = numberArrayDemo.map( ( x ) => x * 2 );
+console.log(doubledArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
   forEach yra 'Array' iteracinis metodas. Jo tikslas, tiesiog įvykdytį argumentu perduotą funkciją,
@@ -26,3 +68,5 @@ numberArrayDemo.__proto__.forEach = function (callback) {
 const printElement = (number) => console.log(number);
 
 numberArrayDemo.forEach(printElement);
+
+
