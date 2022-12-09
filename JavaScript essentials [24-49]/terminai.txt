@@ -19,6 +19,10 @@ invocation/call - iškvietimas - funkcijos vykdymas
 parameters - parametrai - funkcijos iškvietimo metu sukuriami kintamieji, kurių reikšmės bus priskirtos pagal argumentus.
 arguments - argumentai - funkcijos iškvietimo metu perduodamos reikšmės, kurios bus įrašytos į parametrus.
 annonymous function - anoniminė funkcija - funkcijos reikšmė, kuri nepasiekiama kintamuoju.
+aukštesniojo lygio funkcija - tai funkcija kuri:
+  a) priima kitą funkciją parametru ir iškviečią ją pagal aprašyta logiką
+  b) grąžina dar kitą funkciją, kuri naudoja išorinė funkcijos parametrus ar iškvietimo atmintį.
+callback - parametru priimta funkcija - funkcija kurią naudoja aukštesniojo lygio funkcija.
 
                                       Algorythms - algoritmai 
 algorythm - algoritmas - užduoties sprendimo principas aprašant veiksmų seką/kartojimus
