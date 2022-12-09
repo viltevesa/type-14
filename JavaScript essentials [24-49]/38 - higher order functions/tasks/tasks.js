@@ -1,7 +1,7 @@
 console.group('1. Sukurkite funkciją, kuri priima spalvą ir grąžina funkciją, kuri spausdins tekstą išorinei funkcijai perduota spalva');
 {
   const createColorfulPrintingFunction = (color) => {
-    return (text) => console.log(`%c${text}`, `color: ${color}`);
+
   }
 
   const printRed = createColorfulPrintingFunction('red');
@@ -18,7 +18,30 @@ console.group('2. Sukurkite funkciją, kuri priima simbolių masyvą ir grąžin
 }
 console.groupEnd();
 
-console.group('3. Sukurkite funkciją, kuri priima funkciją priimančią 2 parametrus ir grąžiną perduotą funkciją iškviečiamą su dviem invokacijom');
+console.group('3. Sukurkite funkciją kuri grąžina funkciją atspausdinančią tekstą apgaubus šauktukais');
+/*
+  const printWithBangs = createPrintWithBangs();
+  printWithBangs('tekstas') -> !tekstas!
+  printWithBangs('labas') -> !labas!
+*/
+{
+
+}
+console.groupEnd();
+
+console.group('4. Sukurkite funkciją kuri grąžina funkciją atspausdinančią tekstą apgaubus išorinės funkcijos parametru');
+/*
+  const printWithBangs = createPrintBetween('!');
+  const printWithDashes = createPrintBetween('---');
+  printWithBangs('tekstas') -> !tekstas!
+  printWithDashes('tekstas') -> ---labas---
+*/
+{
+
+}
+console.groupEnd();
+
+console.group('5. Sukurkite funkciją, kuri priima funkciją priimančią 2 parametrus ir grąžiną perduotą funkciją iškviečiamą su dviem invokacijom');
 {
   // funkcija priimanti 2 parametrus
   const add = (a, b) => a + b;
@@ -32,29 +55,6 @@ console.group('3. Sukurkite funkciją, kuri priima funkciją priimančią 2 para
   const multiplyUnaryQueue = convertBinaryFunctionToUnaryInvocationQueue(multiply);
   // console.log(addUnaryQueue(7)(6)); // 13
   // console.log(multiplyUnaryQueue(7)(6)); // 42
-}
-console.groupEnd();
-
-console.group('4. Sukurkite funkciją kuri grąžina funkciją atspausdinančią tekstą apgaubus šauktukais');
-/*
-  const printWithBangs = createPrintWithBangs();
-  printWithBangs('tekstas') -> !tekstas!
-  printWithBangs('labas') -> !labas!
-*/
-{
-
-}
-console.groupEnd();
-
-console.group('5. Sukurkite funkciją kuri grąžina funkciją atspausdinančią tekstą apgaubus išorinės funkcijos parametru');
-/*
-  const printWithBangs = createPrintBetween('!');
-  const printWithDashes = createPrintBetween('---');
-  printWithBangs('tekstas') -> !tekstas!
-  printWithDashes('tekstas') -> ---labas---
-*/
-{
-
 }
 console.groupEnd();
 
