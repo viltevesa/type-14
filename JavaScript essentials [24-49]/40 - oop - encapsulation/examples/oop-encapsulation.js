@@ -8,7 +8,6 @@
 
   Set'eteris (setter) - tai metodas kuris iškviečiamas tarsi savybė ir yra naudojamas reikšmei nustatyti. Set'eriai naudojami
     tuomet, kuomet norime pritaikyti inkapsuliacijos principus.
-
 */
 
 class Person {
