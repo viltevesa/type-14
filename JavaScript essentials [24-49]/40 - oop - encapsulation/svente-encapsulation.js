@@ -14,10 +14,12 @@ class Šventė {
   // # - privataus nario nustatymas
   #pavadinimas;
   #data;
+  #aprašymas
 
-  constructor(pavadinimas, data) {
+  constructor(pavadinimas, data, aprašymas) {
     this.nustatytiPavadinimą(pavadinimas);
     this.nustatytiDatą(data);
+    this.nustatytiAprašymą(aprašymas);
   }
 
   // getTitle
@@ -47,6 +49,20 @@ class Šventė {
     this.#data = naujaData;
   }
 
+  // getDescription
+  gautiAprašymą() {
+    return this.#aprašymas;
+  }
+
+  // setDescription
+  nustatytiAprašymą(naujasAprašymas) {
+    if (typeof naujasAprašymas !== 'string') throw new Error('Šventės aprašymas privalo būti simbolių darinys');
+    if (naujasAprašymas.length < 10) throw new Error(`Per trumpas šventės aprašymas:\n\t"${naujasAprašymas}"`);
+    if (naujasAprašymas.length > 200) throw new Error(`Per ilgas šventės aprašymas:\n\t"${naujasAprašymas}"`);
+
+    this.#aprašymas = naujasAprašymas;
+  }
+
   likoDienų() {
     const dabar = new Date();
     const likoMiliSekundžių = this.#data - dabar;
@@ -57,13 +73,14 @@ class Šventė {
 }
 
 // ------------------------------------- Bendri kintamieji------------------------------------------
-const šiandien = new Šventė('Šiandien', new Date(2022, 11, 13, 18));
+const šiandien = new Šventė('Šiandien', new Date(2022, 11, 13, 18), 'Džiaugtis reikia kiekviena diena');
+const kūčios = new Šventė('Kūčios', new Date('2022-12-24'), 'Susirenka trys karaliai');
 
 const manoMėgstamiausiosŠventės = [
   šiandien,
-  new Šventė('Kūčios', new Date('2022-12-24')),
-  new Šventė('Kalėdos', new Date(2022, 11, 25)),
-  new Šventė('Kalėdos II', new Date(2022, 11, 26)),
+  kūčios,
+  new Šventė('Kalėdos', new Date(2022, 11, 25), 'Jėzaus gimimas'),
+  new Šventė('Kalėdos II', new Date(2022, 11, 26), 'Jėzaus gimimą švenčiame 2 dienas, nes čia ne šiam Mantelio gimcė'),
 ];
 // ----------------------------------------- Užduotys-----------------------------------------------
 console.group('0. Inkapsuliuokite Šventė.pavadinimas reikšmę, jog ji simbolių darinys nuo 4 iki 32 ismbolių');
@@ -84,6 +101,8 @@ console.groupEnd();
 
 console.group('2. Sukurkite savybę aprašymas ir ją inkapsuliuokite');
 {
-  
+  console.log(kūčios.gautiAprašymą());
+  kūčios.nustatytiAprašymą('Kristaus gimimo laukimas.');
+  console.log(kūčios.gautiAprašymą());
 }
 console.groupEnd();
