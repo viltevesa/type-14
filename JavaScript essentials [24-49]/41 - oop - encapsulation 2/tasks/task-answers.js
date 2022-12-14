@@ -1,29 +1,50 @@
 const isObjectLiteral = (val) => Object.getPrototypeOf(val) === Object.prototype
 
 class House {
-  address;
-  // 1.
+  #address;
   #city;
   #owners;
 
   constructor(address, city, owners) {
     this.address = address;
-    this.setCity(city);
-    this.setOwners(owners);
+    this.city = city;
+    this.owners = owners;
   }
 
-  // 3.
-  setCity(val) {
+  set address(val) {
     if (typeof val !== 'string') {
-      console.error('Error in House.setCity. val must be an string.');
+      console.error('Error in House.address, val must be an string.');
       return;
     }
     if (val.length < 2) {
-      console.error('Error in House.setCity. val must longer than 2 symbols.');
+      console.error('Error in House.address, val must longer than 2 symbols.');
       return;
     }
     if (val.length > 32) {
-      console.error('Error in House.setCity. val must shorter then 32 symbols');
+      console.error('Error in House.address, val must shorter then 32 symbols');
+      return;
+    }
+
+    // TODO: ateityje ištrinti, šis spausdinimas nereikalingas. Dabar naudojama tik mokymosi tikslais
+    console.log(`%cnew address is accepted: ${val}`, 'color: green');
+    this.#city = val;
+  }
+
+  get address() {
+    return this.#address;
+  }
+
+  set city(val) {
+    if (typeof val !== 'string') {
+      console.error('Error in House.city, val must be an string.');
+      return;
+    }
+    if (val.length < 2) {
+      console.error('Error in House.city, val must longer than 2 symbols.');
+      return;
+    }
+    if (val.length > 32) {
+      console.error('Error in House.city, val must shorter then 32 symbols');
       return;
     }
 
@@ -31,12 +52,11 @@ class House {
     console.log(`%cnew city is accepted: ${val}`, 'color: green');
     this.#city = val;
   }
-  // 2
-  getCity() {
+  get city() {
     return this.#city;
   }
 
-  setOwners(newOwners) {
+  set owners(newOwners) {
     if (!Array.isArray(newOwners)) {
       console.error('Error in House.setOwners. newOwners must be an Array.');
       return;
@@ -58,7 +78,7 @@ class House {
     console.log(`%cnewOwners are accepted. Welcome home:\n\t${newOwners.map(x => x.name).join('\n\t')}`, 'color: green');
     this.#owners = newOwners;
   }
-  getOwners() {
+  get owners() {
     return this.#owners;
   }
 }
@@ -73,36 +93,39 @@ const houses = [
 
 console.group('1. HouseInstance.owners savybės inkapsuliacija');
 {
-  console.log(house.getOwners());
-  house.setOwners(8);
-  house.setOwners([]);
-  house.setOwners([7, 8]);
-  house.setOwners([{}, {}, {}]);
-  house.setOwners([{ name: 7 }, { name: 7 }, { name: 7 }]);
-  house.setOwners([{ name: 'a' }, { name: 'aa' }, { name: 'lll' }]);
-  house.setOwners([{ name: 'Ben Waps' }, { name: 'Jeronim Smith' }, { name: 'Kegl Straisen' }]);
+  console.log(house.owners);
+  house.owners = 8;
+  house.owners = [];
+  house.owners = [7, 8];
+  house.owners = [{}, {}, {}];
+  house.owners = [{ name: 7 }, { name: 7 }, { name: 7 }];
+  house.owners = [{ name: 'a' }, { name: 'aa' }, { name: 'lll' }];
+  house.owners = [{ name: 'Ben Waps' }, { name: 'Jeronim Smith' }, { name: 'Kegl Straisen' }];
 }
 console.groupEnd();
 
 console.group('2. Perrašykite HouseInstance.address savybės inkapsuliaciją');
 {
-  
+  house.address = 7; 
+  house.address = '7'; 
+  house.address = 'Bel'; 
+  console.log(house.address);
+  console.log(house.address);
+  console.log(house.address);
 }
 console.groupEnd();
 
 console.group('3. Perrašykite HouseInstance.city savybės inkapsuliaciją');
 {
-  house.setCity(7);
-  house.setCity('7');
-  house.setCity('Bel');
+  house.city = 7; 
+  house.city = '7'; 
+  house.city = 'Bel';
+  console.log(house.city);
+  console.log(house.city);
+  console.log(house.city);
 }
 console.groupEnd();
 
 /*
-  Norint inkapsuliuoti savybę:
-    1. padaryti savybę privačią
-    2. aprašyti get'erio logiką
-      2.1 grąžinti privačią reikšmę.
-    3. aprašyti set'etio logiką
-      3.1 tikrinti naują reikšmę, jie yra nekorektiškumų atspausdinti klaidą ir nutraukti funkciją
+
 */

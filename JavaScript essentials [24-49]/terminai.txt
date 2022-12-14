@@ -27,3 +27,8 @@ callback - parametru priimta funkcija - funkcija kurią naudoja aukštesniojo ly
                                       Algorythms - algoritmai 
 algorythm - algoritmas - užduoties sprendimo principas aprašant veiksmų seką/kartojimus
 sorting - rikiavimas - reikšmių išdėstymas paeiliui, pagal kriterijų
+
+                                      OOP - objektiškai orientuotas programavimas
+class - šablonas kurti objektams naudojant tą patį prototipą
+encapsulation - inkapsuliacija - tiesioginis savybių pasiekiamumo ribojimas
+
