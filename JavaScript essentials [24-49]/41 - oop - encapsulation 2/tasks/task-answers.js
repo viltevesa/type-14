@@ -2,33 +2,59 @@ const isObjectLiteral = (val) => Object.getPrototypeOf(val) === Object.prototype
 
 class House {
   address;
-  city;
+  // 1.
+  #city;
   #owners;
 
   constructor(address, city, owners) {
     this.address = address;
-    this.city = city;
-    this.#owners = owners;
+    this.setCity(city);
+    this.setOwners(owners);
+  }
+
+  // 3.
+  setCity(val) {
+    if (typeof val !== 'string') {
+      console.error('Error in House.setCity. val must be an string.');
+      return;
+    }
+    if (val.length < 2) {
+      console.error('Error in House.setCity. val must longer than 2 symbols.');
+      return;
+    }
+    if (val.length > 32) {
+      console.error('Error in House.setCity. val must shorter then 32 symbols');
+      return;
+    }
+
+    // TODO: ateityje ištrinti, šis spausdinimas nereikalingas. Dabar naudojama tik mokymosi tikslais
+    console.log(`%cnew city is accepted: ${val}`, 'color: green');
+    this.#city = val;
+  }
+  // 2
+  getCity() {
+    return this.#city;
   }
 
   setOwners(newOwners) {
     if (!Array.isArray(newOwners)) {
-      console.error('Error in House.setOwners. newOwners must be an Array.')
+      console.error('Error in House.setOwners. newOwners must be an Array.');
       return;
     }
     if (newOwners.length === 0) {
-      console.error('Error in House.setOwners. newOwners can\'t be empty.')
+      console.error('Error in House.setOwners. newOwners can\'t be empty.');
       return;
     }
     if (!newOwners.every(isObjectLiteral)) {
-      console.error('Error in House.setOwners. Every owner must be object literal.')
+      console.error('Error in House.setOwners. Every owner must be object literal.');
       return;
     }
     if (!newOwners.every((owner) => typeof owner.name === 'string' && owner.name.length > 1)) {
-      console.error('Error in House.setOwners. Every owner must have a name, which is longer than 1 letter.')
+      console.error('Error in House.setOwners. Every owner must have a name, which is longer than 1 letter.');
       return;
     }
 
+    // TODO: ateityje ištrinti, šis spausdinimas nereikalingas. Dabar naudojama tik mokymosi tikslais
     console.log(`%cnewOwners are accepted. Welcome home:\n\t${newOwners.map(x => x.name).join('\n\t')}`, 'color: green');
     this.#owners = newOwners;
   }
@@ -58,14 +84,25 @@ console.group('1. HouseInstance.owners savybės inkapsuliacija');
 }
 console.groupEnd();
 
-console.group('2. Perrašykite HouseInstance.address savybės inkapsuliaciją naudojant naują sintaksę');
+console.group('2. Perrašykite HouseInstance.address savybės inkapsuliaciją');
 {
-
+  
 }
 console.groupEnd();
 
-console.group('3. Perrašykite HouseInstance.city savybės inkapsuliaciją naudojant naują sintaksę');
+console.group('3. Perrašykite HouseInstance.city savybės inkapsuliaciją');
 {
-
+  house.setCity(7);
+  house.setCity('7');
+  house.setCity('Bel');
 }
 console.groupEnd();
+
+/*
+  Norint inkapsuliuoti savybę:
+    1. padaryti savybę privačią
+    2. aprašyti get'erio logiką
+      2.1 grąžinti privačią reikšmę.
+    3. aprašyti set'etio logiką
+      3.1 tikrinti naują reikšmę, jie yra nekorektiškumų atspausdinti klaidą ir nutraukti funkciją
+*/
