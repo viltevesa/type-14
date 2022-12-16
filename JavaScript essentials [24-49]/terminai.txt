@@ -30,5 +30,8 @@ sorting - rikiavimas - reikšmių išdėstymas paeiliui, pagal kriterijų
 
                                       OOP - objektiškai orientuotas programavimas
 class - šablonas kurti objektams naudojant tą patį prototipą
-encapsulation - inkapsuliacija - tiesioginis savybių pasiekiamumo ribojimas
+encapsulation - inkapsuliacija - tiesioginis savybių pasiekiamumo ribojimas, kad užtikrinti savybių korektiškumą.
+paveldimumas - ryšys tarp klasių principu: klasė A yra klasė B. Paveldimumo tikslas - laikyti bendrą funkcionalumą tėvinėje klasėje.
+kompozicija - ryšys tarp klasių principu: klase A turi klasės B objektus/objektą. Kompozicijos tikslas - skirstyti funkcionalumą sudedamosiomis dalimis.
+polimorfizmas - iš pirmos pažiūros tų pačių komandų vykdymas, atliekantis skirtingas funkcijas/metodus.
 
