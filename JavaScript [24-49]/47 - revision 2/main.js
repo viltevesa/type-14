@@ -119,3 +119,9 @@ console.group('Array.prototype.map');
   console.table(filmsTitlesLong);
 }
 console.groupEnd();
+
+console.group('Array.prototype.reduce');
+{
+
+}
+console.groupEnd();
