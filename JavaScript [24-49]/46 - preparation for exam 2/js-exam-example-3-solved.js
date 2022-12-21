@@ -273,7 +273,7 @@ console.group('9. Sugrupuokite televizorius pagal markę.');
     if (prevGroups[groupKey] === undefined) {
       /* 
         1: { samsung: []}
-        4: { ..., amazon: []}
+        4: { samsung: [TV, TV, TV], amazon: []}
       */
       prevGroups[groupKey] = [];
     }
@@ -287,7 +287,7 @@ console.group('9. Sugrupuokite televizorius pagal markę.');
       }
     */
     prevGroups[groupKey].push(tv);
-
+    
     return prevGroups;
   }, {});
 
