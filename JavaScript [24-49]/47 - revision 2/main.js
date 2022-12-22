@@ -52,76 +52,12 @@ const films = [{
   year: 2008,
 }];
 
-console.groupCollapsed('Array.prototype.forEach');
-// Atlieka veiksmus su kiekvienu masyvo elementu
-{
-  films.forEach((film) => {
-    film.roles.forEach((filmRole) => {
-      console.log(filmRole.actor.name, filmRole.actor.surname);
-    });
-  });
-}
-console.groupEnd();
-
-console.groupCollapsed('Array.prototype.filter');
-// Atrenka elementus į naują masyvą, pagal (funkcijos grąžintą) salygą
-{
-  const newFilms = films.filter((film) => film.year > 2000);
-  console.log(newFilms);
-
-  const filmsWithManyRatings = films.filter((film) => film.ratings.includes(7));
-  console.log(filmsWithManyRatings);
-}
-console.groupEnd();
-
-console.groupCollapsed('Array.prototype.some');
-// Patikrina ar nors vienas masyvo elementas tenkina (funkcijos grąžintą) salygą
-{
-  const existsNewFilms = films.some((film) => film.year > 2000);
-  console.log(existsNewFilms);
-
-  const filmsWithKeanu = films.filter((film) => film.roles
-    .some(({ actor: { name, surname } }) => `${name} ${surname}`.toLowerCase() === 'keanu reeves')
-  );
-  console.log(filmsWithKeanu);
-}
-console.groupEnd();
-
-console.groupCollapsed('Array.prototype.every');
-// Patikrina ar visi masyvo elementai tenkina (funkcijos grąžintą) salygą
-{
-  const allFilmsHasTitle = films.every((film) => film.title !== undefined);
-  console.log(allFilmsHasTitle);
-
-  const allFilmsHasAtLeastTwoRoles = films.every((film) => film.roles.length >= 2);
-  console.log(allFilmsHasAtLeastTwoRoles);
-}
-console.groupEnd();
-
-console.group('Array.prototype.map');
-// Sukuria naują masyvą, performuojant kiekvieną masyvo elementą 
-{
-  const filmsTitles = films.map((film) => film.title);
-  console.log(filmsTitles);
-
-  const filmsCardViewModels = films.map((film) => ({
-    title: `${film.title}(${film.year})`,
-    rating: Number((film.ratings.reduce((sum, num) => sum + num) / film.ratings.length / 2).toFixed(1)),
-  }));
-  console.table(filmsCardViewModels);
-
-  const filmsTitlesLong = films.map((film) => {
-    const avgRounded = Math.round(film.ratings.reduce((sum, num) => sum + num) / film.ratings.length / 2);
-    const stars = '★'.repeat(avgRounded) + '☆'.repeat(5 - avgRounded);
-
-    return `${film.title}(${film.year}) ${stars}`;
-  });
-  console.table(filmsTitlesLong);
-}
-console.groupEnd();
-
 console.group('Array.prototype.reduce');
 {
+  console.group('1. Surasti Vieno filmo, įvertinimų vidurkį');
+  {
 
+  }
+  console.groupEnd();
 }
 console.groupEnd();
