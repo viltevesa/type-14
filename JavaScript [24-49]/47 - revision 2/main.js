@@ -52,6 +52,16 @@ const films = [{
   year: 2008,
 }];
 
+const items = [
+  { title: 'ball', weight: 1000, categories: ['sports', 'hobbies', 'games', 'outdoors'] },
+  { title: 'cards', weight: 200, categories: ['sports', 'hobbies', 'games', 'poker'] },
+  { title: 'pen', weight: 100, categories: ['stationary', 'writing'] },
+  { title: 'cup', weight: 400, categories: ['kitchen'] },
+  { title: 'milk', weight: 2100, categories: ['food', 'lactose'] },
+  { title: 'beef jerkies', weight: 1100, categories: ['food', 'meat', 'beef'] },
+  { title: 'sunglasses', weight: 1100, categories: ['hobbies', 'sun protection', 'outdoors'] },
+];
+
 console.group('Array.prototype.reduce');
 {
   console.group('1. Surasti Vieno filmo, įvertinimų vidurkį');
@@ -66,6 +76,49 @@ console.group('Array.prototype.reduce');
   console.groupEnd();
 
   console.group('2. Atspausdinti kiekvieno filmo, įvertinimų vidurkį');
+  {
+    films.forEach((film) => {
+      const filmRatingsAvg = film.ratings.reduce((prevSum, number) => prevSum + number) / film.ratings.length;
+      const filmRatingsAvgRounded = Number(filmRatingsAvg.toFixed(2));
+      console.log(filmRatingsAvgRounded);
+    });
+  }
+  console.groupEnd();
+
+  console.group('3. Suskaičiuoti visų filmų įvetinimų vidurkį');
+  {
+    const totalAvg = films.reduce((prevRatingSum, film) => {
+      const filmRatingSum = film.ratings.reduce((prevSum, rating) => prevSum + rating);
+      const filmRating = filmRatingSum / film.ratings.length;
+
+      return prevRatingSum + filmRating;
+    }, 0) / films.length;
+
+    const totalAvgRounded = Number(totalAvg.toFixed(2));
+    console.log(totalAvgRounded);
+  }
+  console.groupEnd();
+
+  console.group('4. Sugrupuoti items pagal kategorijas');
+  {
+    const groupedItemsByCategories = items.reduce((prevGroups, item) => {
+      item.categories.forEach((categoryName) => {
+        const groupKey = categoryName.toLowerCase();
+        if (prevGroups[groupKey] === undefined) {
+          prevGroups[groupKey] = [];
+        }
+        prevGroups[groupKey].push(item);
+      })
+
+      return prevGroups;
+    }, {})
+
+    console.log(groupedItemsByCategories);
+  }
+  console.groupEnd();
+
+  // '5. Suskaičiuokite kiekvienos <items> katgorijos daiktų kiekį
+  console.group('5. Suskaičiuokite kiek yra kiekvienos <items> kategorijos daiktų');
   {
     
   }
