@@ -56,7 +56,18 @@ console.group('Array.prototype.reduce');
 {
   console.group('1. Surasti Vieno filmo, įvertinimų vidurkį');
   {
+    const film = films[0];
+    const filmRatings = film.ratings;
+    const filmRatingsSum = filmRatings.reduce((prevSum, number) => prevSum + number);
+    const filmRatingsAvg = filmRatingsSum / filmRatings.length;
+    const filmRatingsAvgRounded = Number(filmRatingsAvg.toFixed(2));
+    console.log(filmRatingsAvgRounded)
+  }
+  console.groupEnd();
 
+  console.group('2. Atspausdinti kiekvieno filmo, įvertinimų vidurkį');
+  {
+    
   }
   console.groupEnd();
 }
