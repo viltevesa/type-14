@@ -62,6 +62,20 @@ const items = [
   { title: 'sunglasses', weight: 1100, categories: ['hobbies', 'sun protection', 'outdoors'] },
 ];
 
+const friends = [{
+  name: "Anna",
+  books: ["Bible", "Harry Potter", "War and peace"],
+  age: 21,
+}, {
+  name: "Bob",
+  books: ["Pifo nuotykiai", "War and peace", "Romeo and Juliet"],
+  age: 26,
+}, {
+  name: "Alice",
+  books: ["The Lord of the Rings", "The Shining"],
+  age: 18,
+}];
+
 console.group('Array.prototype.reduce');
 {
   console.group('1. Surasti Vieno filmo, įvertinimų vidurkį');
@@ -111,7 +125,7 @@ console.group('Array.prototype.reduce');
       })
 
       return prevGroups;
-    }, {})
+    }, {});
 
     console.log(groupedItemsByCategories);
   }
@@ -120,7 +134,27 @@ console.group('Array.prototype.reduce');
   // '5. Suskaičiuokite kiekvienos <items> katgorijos daiktų kiekį
   console.group('5. Suskaičiuokite kiek yra kiekvienos <items> kategorijos daiktų');
   {
-    
+    const groupedItemsByCategories = items.reduce((prevGroups, item) => {
+      item.categories.forEach((categoryName) => {
+        const groupKey = categoryName.toLowerCase();
+        if (prevGroups[groupKey] === undefined) {
+          prevGroups[groupKey] = 0
+        }
+        prevGroups[groupKey] += 1;
+      })
+
+      return prevGroups;
+    }, {});
+
+    console.log(groupedItemsByCategories);
+  }
+  console.groupEnd();
+
+  console.group('6. Į vieną masyvą sudėkite visas draugų <friends> skaitytas knygas');
+  {
+    const allReadBooks = [...new Set(friends.reduce((prevBooks, { books }) => [...prevBooks, ...books], []))];
+
+    console.log(allReadBooks);
   }
   console.groupEnd();
 }
