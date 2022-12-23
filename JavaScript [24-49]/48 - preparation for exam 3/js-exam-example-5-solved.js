@@ -72,7 +72,8 @@ class Film {
   get rating() {
     const sum = this.ratings.reduce((sum, score) => sum + score);
     const avg = sum / this.ratingCount;
-    const avgRounded = Math.round(avg * 10) / 10
+    // const avgRounded = Number(avg.toFixed(1));
+    const avgRounded = Math.round(avg * 10) / 10;
 
     return avgRounded;
   }
@@ -122,24 +123,22 @@ console.groupEnd();
 console.group('5. Išrikiuokite filmus pagal reitingą, nuo mažiausio iki didžiausio, nepakeičiant orginalių duomenų');
 {
   filmsByRating = [...films].sort((f1, f2) => f1.rating - f2.rating);
+
   console.table();
 }
 console.groupEnd();
 
 console.group('6. Atvaizduokite [5.] punktu išrikiuotų filmų atvaizdavimą lentele(console.table). Lentelė turi turėti 3 stulpelius: "title", "rating" ir  "ratingCount"');
 {
-  const filmsRatingsInfo = filmsByRating.map(({ title, rating, ratingCount }) => ({
-    title,
-    rating,
-    ratingCount
-  }));
+  const filmsRatingsInfo = filmsByRating.map(({ title, rating, ratingCount }) => ({ title, rating, ratingCount }));
   console.table(filmsRatingsInfo);
 }
 console.groupEnd();
 
 console.group('7. Suskaičiuokite kiek yra filmų senesnių nei 2000 metai');
 {
-  const filmsCountUnder2000 = films.reduce((count, { year }) => year < 2000 ? count + 1 : count, 0);
+  // const filmsCountUnder2000 = films.reduce((count, { year }) => year < 2000 ? count + 1 : count, 0);
+  const filmsCountUnder2000 = films.filter(({ year }) => year < 2000).length;
   console.log({ filmsCountUnder2000 });
 }
 console.groupEnd();
@@ -157,6 +156,7 @@ console.group('9. Atrinkite filmus kuriuose vaidino "Keanu Reeves". Atrinkimą a
   const filmsWithKeanuReeves = films.filter((film) => film.roles.some(
     ({ actor }) => (`${actor.name} ${actor.surname}`).toLowerCase() === actorFullname.toLowerCase())
   );
+
   console.table(filmsWithKeanuReeves);
 }
 console.groupEnd();
@@ -193,7 +193,7 @@ pvz2:
 {
   const filmsFormatted = films.map(({ title, roles, rating, ratingCount, year }) => ({
     name: title,
-    cast: roles.map(({ title, actor: { name, surname } }) => `${title}: ${name} ${surname}`),
+    cast: roles.map(({ title, actor }) => `${title}: ${actor.name} ${actor.surname}`),
     rating,
     ratingCount,
     year,
